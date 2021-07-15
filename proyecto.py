@@ -169,6 +169,15 @@ print("")
 print("PASO 9 GRAFICOS CLAVES PARA EL ESTUDIO DE ANALISIS DE DATOS")
 print("")
 
+
+#grafico de matriz de correlacion
+plt.title("GRÁFICO DE LA MATRIZ DE CORRELACIÓN DE LOS DATOS")
+correlation_mat = data.corr()
+img=sns.heatmap(correlation_mat, annot = True)
+plt.show()
+figure=img.get_figure()
+figure.savefig("matrizdecorrelacion.png",dpi=400)
+
 #grafico de histogramas
 plt.rc('xtick', labelsize=5)
 plt.rc('ytick', labelsize=5)
